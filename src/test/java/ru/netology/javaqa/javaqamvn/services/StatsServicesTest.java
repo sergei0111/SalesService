@@ -1,11 +1,11 @@
 package ru.netology.javaqa.javaqamvn.services;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
+public class StatsServicesTest {
 
-public class SalesServiceTest {
     @Test
     public void calcSumSales() {
         SalesServices service = new SalesServices();
@@ -29,7 +29,7 @@ public class SalesServiceTest {
     }
 
     @Test
-    public void maxSales() {
+    void maxSales() {
         SalesServices service = new SalesServices();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -40,7 +40,7 @@ public class SalesServiceTest {
     }
 
     @Test
-    public void minSales() {
+    void minSales() {
         SalesServices service = new SalesServices();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -51,7 +51,7 @@ public class SalesServiceTest {
     }
 
     @Test
-    public void underAverage() {
+    void underAverage() {
         SalesServices service = new SalesServices();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -62,7 +62,7 @@ public class SalesServiceTest {
     }
 
     @Test
-    public void upperAverage() {
+    void upperAverage() {
         SalesServices service = new SalesServices();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
@@ -71,4 +71,6 @@ public class SalesServiceTest {
 
         assertEquals(expected, actual);
     }
+
+
 }
